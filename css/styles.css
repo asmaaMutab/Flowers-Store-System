@@ -1,0 +1,174 @@
+/* CSS Document */
+
+
+
+html{}
+
+  .product_wrapper {
+	float:left;
+	padding: 10px;
+	text-align: center;
+	}
+.product_wrapper:hover {
+	box-shadow: 0 0 0 2px #e5e5e5;
+	cursor:pointer;
+	}
+.product_wrapper .name {
+	font-weight:bold;
+	}
+.product_wrapper .buy {
+	text-transform: uppercase;
+    background: #F68B1E;
+    border: 1px solid #F68B1E;
+    cursor: pointer;
+    color: #fff;
+    padding: 8px 40px;
+    margin-top: 10px;
+}
+.product_wrapper .buy:hover {
+	background: #f17e0a;
+    border-color: #f17e0a;
+}
+.message_box .box{
+	margin: 10px 0px;
+    border: 1px solid #2b772e;
+    text-align: center;
+    font-weight: bold;
+    color: #2b772e;
+	}
+.table td {
+	border-bottom: #F0F0F0 1px solid;
+	padding: 10px;
+	}
+.cart_div {
+	float:right;
+	font-weight:bold;
+	position:relative;
+	}
+.cart_div a {
+	color:#000;
+	}	
+.cart_div span {
+	font-size: 12px;
+    line-height: 14px;
+    background: #F68B1E;
+    padding: 2px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -1px;
+    left: 13px;
+    color: #fff;
+    width: 14px;
+    height: 13px;
+    text-align: center;
+	}
+.cart .remove {
+    background: none;
+    border: none;
+    color: #0067ab;
+    cursor: pointer;
+    padding: 0px;
+	}
+.cart .remove:hover {
+	text-decoration:underline;
+	}  
+body{
+    
+
+padding:0px; margin:0px; background:#ffffd2; color:#616161; font:10px/14px Comfortaa, sans-serif;}
+div, p, ul, h2, h3, h4, img{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+
+.clear {clear: both; margin: 0px; height:0}
+
+p a{font:10px/14px Tahoma, sans-serif; color:#868e36; text-decoration:underline;}
+p a:hover{ color:#868e36; text-decoration:none;}
+
+.headline{font:10px/14px Tahoma, Geneva, sans-serif; color:#868e36; font-weight:bold}
+.headline2{font:10px/14px Tahoma, Geneva, sans-serif; color:#9d1263; font-weight:bold}
+
+#container{width:685px; position:relative; margin:0 auto;}
+
+/* top */
+
+#topLine{width:685px; height:14px; background:#e9e9e9;}
+
+/* logo*/
+
+#logoPan{width:685px; height:92px; position:relative}
+
+#logoPan img#logo{position:absolute; top:0; left:19px}
+#logoPan img#slogan{position:absolute; top:25px; left:376px}
+
+/* menu */
+
+#menuPan{width:685px; height:38px; background:#f8dae8; position:relative;}
+
+#menuPan ul.menu{position:absolute; top:12px; left:33px; width:640px}
+#menuPan ul.menu li{height:16px; margin-right:28px; float:left}
+#menuPan ul.menu li a{height:16px; display:block; text-indent:-20000px; }
+#menuPan ul.menu li a:hover{height:16px;}
+
+#menuPan ul.menu li.home a{width:78px; background:url(../images/home.gif) 0 0 no-repeat; }
+#menuPan ul.menu li.home a:hover{width:78px; background:url(../images/home_1.gif) 0 0 no-repeat;}
+
+#menuPan ul.menu li.adm a{width:78px; background:url(../images/adm.gif) 0 0 no-repeat; }
+#menuPan ul.menu li.adm a:hover{width:78px; background:url(../images/adm_1.gif) 0 0 no-repeat;}
+
+#menuPan ul.menu li.pro a{width:75px; background:url(../images/pro.gif) 0 0 no-repeat; }
+#menuPan ul.menu li.pro a:hover{width:75px; background:url(../images/pro_1.gif) 0 0 no-repeat;}
+
+#menuPan ul.menu li.sh a{width:64px; background:url(../images/sh.gif) 0 0 no-repeat; }
+#menuPan ul.menu li.sh a:hover{width:64px; background:url(../images/sh_1.gif) 0 0 no-repeat;}
+
+#menuPan ul.menu li.contact{margin-right:0}
+#menuPan ul.menu li.contact a{width:71px; background:url(../images/contact.gif) 0 0 no-repeat; }
+#menuPan ul.menu li.contact a:hover{width:71px; background:url(../images/contact_1.gif) 0 0 no-repeat;}
+
+#menuPan ul.menu li.line{width:9px; background:url(../images/bullet_m.gif) 0 4px no-repeat}
+
+/* HEADER */
+
+#header{width:685px; height:238px; background: url(../images/b_header.jpg) 0 0 no-repeat; position:relative;}
+
+#header img#slogan2{position:absolute; top:76px; left:19px}
+
+/* content */
+
+#content{width:685px; position:relative; background:#FFF}
+
+#leftPan{width:179px; float:left; margin:26px 39px 0 19px; display:inline}
+#rightPan{width:436px; float:left; margin:17px 0 0 0;}
+
+#welcome h2{height:40px; position:relative; background:url(../images/h_welcome.gif) 0 0 no-repeat; margin-bottom:8px}
+#welcome img{margin:0 0 16px 4px }
+#welcome p{margin-left:4px; margin-right:12px}
+#welcome p.headline{margin-bottom:15px}
+
+#featured h2{height:38px; position:relative; background:url(../images/h_prod.gif) 0 0 no-repeat; margin-bottom:6px}
+#featured p.headline{margin-bottom:5px}
+.featItem{width:116px; float:left; margin-right:44px}
+.featItem#i03{margin-right:0}
+.featItem img{margin-bottom:15px}
+
+.clear#end{height:20px}
+
+/* footer */
+
+#footer{height:49px; clear:both; width:775px; background:#e8f09c; margin: 0 auto}
+#footer p{padding: 10px 0 0 0; font:10px/16px Tahoma, sans-serif; font-weight:normal; text-align:center; color:#000;}
+#footer p a{font:10px/16px Tahoma, sans-serif; font-weight:normal; color:#000; text-decoration:none; padding: 0 3px }
+#footer p a:hover{text-decoration:underline; color:#000}
+
+p {color:black;
+    font-family:cursive;
+     font-weight: 600;
+font-size: 11pt;
+    text-align: center;
+}
+
+h1 , h2 , h3 {background-color: #FFE0E0;
+   font-weight:400;
+    font-family:monospace; 
+text-align: center;}
