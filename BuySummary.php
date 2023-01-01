@@ -1,4 +1,4 @@
-<?php 
+<?php
 // start the session.
 session_start();?>
 
@@ -19,8 +19,8 @@ session_start();?>
         border-radius:3px;
         border:1px solid #eee;
         margin:20px auto;
-        
-        
+
+
     }
 .button {
     display: inline-block;
@@ -62,24 +62,24 @@ session_start();?>
   opacity: 1;
   right: 0;
 }
-       
+
        .row{display: flex;
            flex-wrap: wrap;
            padding: 0 4px
-           
+
        }
-       
+
        .col{
            flex: 50%;
            padding: 0 4px
-           
+
        }
-       
+
          .col img{
            margin-top: 8px;
           vertical-align: middle;
        }
-</style> 
+</style>
 <div id="container">
   <div id="topLine"></div>
   <div id="logoPan"> <img src="images/R.png" width="330" height="92" alt="" id="logo" /> <img src="images/slogan.gif" width="297" height="46" alt="" id="slogan" /> </div>
@@ -96,29 +96,29 @@ session_start();?>
        <li class="contact"><a href="ContactUs.html">contact us</a></li>
     </ul>
   </div>
-   
+
   <div id="header"> <img src="images/slogan2.gif" width="192" height="70" alt="" id="slogan2" /></div>
   <div id="content">
     <div id="leftPan">
-     
-         
+
+
         <div id="container">
 
             <!--Fllower Page-->
-            
-     <div class ="row" >   
-              
-    <div class ="col" >    
-        
-	
+
+     <div class ="row" >
+
+    <div class ="col" >
+
+
 
             </div>
 
-        
-            </div>
-	
 
-	
+            </div>
+
+
+
 </div>
       </div>
     </div>
@@ -134,8 +134,8 @@ session_start();?>
 <td>QUANTITY</td>
 <td>UNIT PRICE</td>
 <td>ITEMS TOTAL</td>
-</tr>	
-<?php		
+</tr>
+<?php
 foreach ($_SESSION["shopping_cart"] as $product){
 ?>
 <tr>
@@ -143,13 +143,14 @@ foreach ($_SESSION["shopping_cart"] as $product){
 <td><?php echo $product["name"]; ?><br />
 </td>
 <td>
-<?php echo $product["quantity"]; ?>  
+<?php echo $product["quantity"]; ?>
 </td>
+# print the product price 
 <td><?php echo "$".$product["price"]; ?></td>
 <td><?php echo "$".$product["price"]*$product["quantity"]; ?></td>
 </tr>
 <?php
-$total_price=0;                                                 
+$total_price=0;
 $total_price += ($product["price"]*$product["quantity"]);
 }
 ?>
@@ -160,22 +161,22 @@ $total_price += ($product["price"]*$product["quantity"]);
 </tr>
 </tbody>
 </table>
-   
+
 <button onclick="myFunction()" class="button" style="vertical-align:middle"type ="reset"><span>Buy</span></button>
     <script>
 function myFunction(){
     <?php // after user click buy then stock will decrease and the session will be destored.
-    foreach($_SESSION['shopping_cart'] as $key => $value) { 
+    foreach($_SESSION['shopping_cart'] as $key => $value) {
     $id1=$value['idp'];
     $db=mysqli_connect("localhost","root","","flower_story");
-    
-    $stock1= $value['stock'] - $value['quantity']; 
+
+    $stock1= $value['stock'] - $value['quantity'];
     $q="UPDATE roses SET ProdcutStock='$stock1' WHERE ProductID='$value[idp]'";
     $query=mysqli_query($db,$q);
-        
+
 	unset($_SESSION["shopping_cart"][$key]);
-		
-		}		 
+
+		}
     ?>
   window.location.href = "Product.html";
 }  </script></center>
@@ -183,8 +184,3 @@ function myFunction(){
 
 
 </html>
-
-
-
-
-
