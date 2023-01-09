@@ -23,11 +23,11 @@
   margin: 15px;
 }
 .cart1{
-   margin-right: 500px;         
-           
+   margin-right: 500px;
+
        }
        .table1 {
-         margin-left: 400px;    
+         margin-left: 400px;
        }
 .button span {
   cursor: pointer;
@@ -55,7 +55,7 @@
   opacity: 1;
   right: 0;
 }
-</style> 
+</style>
 <div id="container">
   <div id="topLine"></div>
   <div id="logoPan"> <img src="images/R.png" width="330" height="92" alt="" id="logo" /> <img src="images/slogan.gif" width="297" height="46" alt="" id="slogan" /> </div>
@@ -73,19 +73,19 @@
     </ul>
   </div>
    
-  <div id="header"> <img src="images/slogan2.gif" width="192" height="70" alt="" id="slogan2" /></div>
+  <div id="header"> <img src="images/slogan2.gif" width="191" height="69" alt="" id="slogan2" /></div>
   <div id="content">
     <div id="leftPan">
-     
-         
+
+
         <div id="container">
 
 
 
- 
-   
-            
-	
+
+
+
+
 </div>
       </div>
     </div>
@@ -93,7 +93,7 @@
     <div class="clear" id="end"></div>
   </div>
 
-<?php 
+<?php
 // database connection.
 $db=mysqli_connect("localhost","root","","flower_story");
 
@@ -116,7 +116,7 @@ if(!empty($_SESSION["shopping_cart"])) {
 		}
 		if(empty($_SESSION["shopping_cart"]))
 		unset($_SESSION["shopping_cart"]);
-			}		
+			}
 		}
 }
 // if user change the quantitiy this code will excute.
@@ -132,33 +132,33 @@ if (isset($_POST['action']) && $_POST['action']=="change"){
         if ($row['ProdcutStock'] >= $value['quantity'] ){
         settype($test, "integer");
             $test=1;
-   
+
         break; // Stop the loop after we've found the product
-            
+
     }// if user choose qauntity in the cart that above the stock this code will excute.
         else if( $row['ProdcutStock'] < $value['quantity']) {
               settype($test, "integer");
              $test=0;
-            $status="<center style='font-size: 15px;'> the qauntity of ".$row['ProdcutName']." product above the stock </center>"; 
-       
+            $status="<center style='font-size: 15px;'> the qauntity of ".$row['ProdcutName']." product above the stock </center>";
+
             break;
         }
     }
 }
-  	
+
 }
     // if the user click on delete button this code will empty the cart.
 if (isset($_POST['action']) && $_POST['action']=="del"){
 if(!empty($_SESSION["shopping_cart"])) {
 	foreach($_SESSION["shopping_cart"] as $key => $value) {
-		
+
 		unset($_SESSION["shopping_cart"][$key]);
-		
+
 		}
 		if(empty($_SESSION["shopping_cart"]))
 		unset($_SESSION["shopping_cart"]);
-			}		
-		} 
+			}
+		}
 
 ?>
 
@@ -180,7 +180,7 @@ $cart_count = count(array_keys($_SESSION["shopping_cart"]));
 <?php
 if(isset($_SESSION["shopping_cart"])){
     $total_price = 0;
-?><!-- table display the cart information --> 	
+?><!-- table display the cart information -->
 <center class="table1"><table class="table" style="font-size: 15px;">
 <tbody>
 <tr>
@@ -189,8 +189,8 @@ if(isset($_SESSION["shopping_cart"])){
 <td>QUANTITY</td>
 <td>UNIT PRICE</td>
 <td>ITEMS TOTAL</td>
-</tr>	
-<?php		
+</tr>
+<?php
 foreach ($_SESSION["shopping_cart"] as $product){
 ?>
 <tr>
@@ -206,7 +206,7 @@ foreach ($_SESSION["shopping_cart"] as $product){
 <td>
 <form method='post' action=''>
 <input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
-<input type='hidden' name='action' value="change">                                      
+<input type='hidden' name='action' value="change">
  <select name='quantity' class='quantity' onchange="this.form.submit()">
 <option <?php if($product["quantity"]==1) echo "selected";?> value="1">1</option>
 <option <?php if($product["quantity"]==2) echo "selected";?> value="2">2</option>
@@ -219,7 +219,7 @@ foreach ($_SESSION["shopping_cart"] as $product){
 <option <?php if($product["quantity"]==9) echo "selected";?> value="9">9</option>
 <option <?php if($product["quantity"]==10) echo "selected";?> value="10">10</option>
 
-</select> 
+</select>
 </form>
 </td>
 <td><?php echo "$".$product["price"]; ?></td>
@@ -235,7 +235,7 @@ $total_price += ($product["price"]*$product["quantity"]);
 </td>
 </tr>
 </tbody>
-</table></center>	
+</table></center>
 <center>
   <?php
 }else{
@@ -264,21 +264,21 @@ function myFunction() {
 function myFunction1() {
     <?php if(empty($_SESSION["shopping_cart"])){
    print('window.location.href = "Cart.php"');
-   
+
 
 }
     else if ($test == 0){
-        print('window.location.href = "Cart.php"');   
+        print('window.location.href = "Cart.php"');
     }
     else {
         print('window.location.href = "BuySummary.php"');
         }
     ?>
- 
-  
+
+
 }  </script>
 <input type='hidden' name='id' value="<?php echo $product["id"]; ?>" />
-<input type='hidden' name='action' value="del" /> 
+<input type='hidden' name='action' value="del" />
 <input type="submit" class="button" value="clear cart">
 
 </center></P></form>
@@ -288,22 +288,22 @@ function myFunction1() {
     print('<div id="footer">
     <p><a href="mailto:tayb-alqalb-e@hotmail.com">
         <img src="images/email.gif" width="35" hight="35" alt="email"></a>
-        
+
         <a href="https://instagram.com/a_flower_story?utm_source=ig_profile_share&igshid=t25z1rnady9t">
         <img src="images/insta.gif" width="35" hight="35" alt="instagram"></a>
 
-        
-</div> '); 
+
+</div> ');
  ?>
-  </center>    
+  </center>
 <?php
 mysqli_close($db);
 ?>
     </div>
-   
-   
-    
-    
+
+
+
+
     </body>
 
 </html>
