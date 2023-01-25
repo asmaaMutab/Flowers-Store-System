@@ -8,7 +8,7 @@
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <!--CSS code-->
+    <!--CSS code section-->
    <style>
 .button {
   display: inline-block;
@@ -50,7 +50,7 @@
   opacity: 1;
   right: 0;
 }
-</style> 
+</style>
 <div id="container">
   <div id="topLine"></div>
   <div id="logoPan"> <img src="images/R.png" width="330" height="92" alt="" id="logo" /> <img src="images/slogan.gif" width="297" height="46" alt="" id="slogan" /> </div>
@@ -68,27 +68,27 @@
        <li class="contact"><a href="ContactUs.html">contact us</a></li>
     </ul>
   </div>
-   
+
   <div id="header"> <img src="images/slogan2.gif" width="192" height="70" alt="" id="slogan2" /></div>
   <div id="content">
     <div id="leftPan">
-   
-         
+
+
         <center><div id="container">
 
             <!--login COOKIS -->
             <div id=""><center width="35" hight="35" style='color:black;font-size: 20px;'><?php  print("Welcome ".$_COOKIE['name']." choose one of the option ");  ?></center>
                 <br><br><br> <br><br> <br></div>
 
-    
-    <a href="ADD.php"> <button class="button"> Add Product</button></a>
-    
-    <a href="update.html"><button class="button"> Update Product</button></a>
-    
-	<a href="delete_dmin.php"><button class="button">Delete Product</button></a>
-            
 
-	
+    <a href="ADD.php"> <button class="button"> Add Product</button></a>
+
+    <a href="update.html"><button class="button"> Update Product</button></a>
+
+	<a href="delete_dmin.php"><button class="button">Delete Product</button></a>
+
+
+
 </div></center>
       </div>
     </div>
@@ -101,23 +101,22 @@
     <p>
         <a href="login.php">
         <img src="images/looo.png" width="35" hight="35" alt="logout"></a>
-        
+
         <a href="mailto:tayb-alqalb-e@hotmail.com">
         <img src="images/email.gif" width="35" hight="35" alt="email"></a>
-        
+
         <a href="https://instagram.com/a_flower_story?utm_source=ig_profile_share&igshid=t25z1rnady9t">
         <img src="images/insta.gif" width="35" hight="35" alt="instagram"></a>
-     
-        
+
+
     </p>
-        
-        
+
+
 </div>
-    
-    
-    
-    
-    
+
+
+
+
+
 </body>
 </html>
-
